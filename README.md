@@ -2,7 +2,7 @@
 
 ## clone the project
 ```
-git clone [url]
+git clone https://github.com/rahil4rahil/order-app.git
 ```
 
 ## navigate to project
