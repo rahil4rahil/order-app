@@ -77,13 +77,12 @@ export default {
       console.log(item)
         // Setting the current status to next status
       if (item.status == 'Ready') {
-      
         this.$store.commit('updateOrderStatus', { orderId: item.id, nextStatus: 'Ready to serve' })
       }
       else if (item.status == 'Order Received') {
         this.$store.commit('updateOrderStatus', { orderId: item.id, nextStatus: 'Ready' })
       }
-      event.stopPropagation();
+      event.stopPropagation(); // stopping the list click propagation
     }
   },
 };

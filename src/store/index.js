@@ -21,9 +21,10 @@ export default new Vuex.Store({
   },
   getters: {
     getOrderList: (state) => {
-      return state.orders
+      return state.orders   // getting order list from store
     },
     getOrderById: state => orderId => {
+      // getting the order by id
       return state.orders.find((item) => {
         return item.id == orderId
       })
@@ -31,13 +32,13 @@ export default new Vuex.Store({
   },
   actions: {
     getOrderedData: ({state, commit}, payload) => {
-      return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          commit('setOrderList', orderData)
-        }, 2000)
-      })
+      // Using timeout for resposne delay
+      setTimeout(() => {
+        commit('setOrderList', orderData)
+      }, 2000)
     }
   },
   modules: {
+    // Not using module for now since time is limited.
   }
 })

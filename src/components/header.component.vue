@@ -29,10 +29,10 @@ export default {
     handleSubmit(e) {
       console.log(this.$route)
       if (e.target.innerHTML == 'View Orders') {
-        this.$router.push({path: '/order'})
+        this.$router.push({ path: '/order' }) // navigating to order page
       }
       else if (e.target.innerHTML == 'Home') {
-        this.$router.push({path: '/'})
+        this.$router.push({ path: '/' }) // nagivating to home page
       }
     }
   }
