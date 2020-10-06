@@ -1,0 +1,77 @@
+[
+  {
+    "id": 18738,
+    "image": "pizza-1",
+    "text": "Order #18738",
+    "status": "Order Received",
+    "orderedBy": "Anish Mahajan",
+    "items": [
+      {
+        "itemId": "1",
+        "name": "Pan Pizza",
+        "quantity": 2,
+        "rate": 60
+      },
+      {
+        "itemId": "2",
+        "name": "Margherita Pizza",
+        "quantity": 1,
+        "rate": 300
+      },
+      {
+        "itemId": "3",
+        "name": "Double Cheese Margherita",
+        "quantity": 1,
+        "rate": 450
+      }
+    ]
+  },
+  {
+    "id": 18124,
+    "image": "pizza-4",
+    "text": "Order #18124",
+    "status": "Order Received",
+    "orderedBy": "Vikas Gupta",
+    "items": [
+      {
+        "itemId": "5",
+        "name": "Mexican Green Wave",
+        "quantity": 1,
+        "rate": 350
+      },
+      {
+        "itemId": "8",
+        "name": "Deluxe Veggie",
+        "quantity": 1,
+        "rate": 400
+      }
+    ]
+  },
+  {
+    "id": 11232,
+    "image": "pizza-3",
+    "text": "Order #11232",
+    "status": "Order Received",
+    "orderedBy": "Anjali Thakur", 
+    "items": [
+      {
+        "itemId": "2",
+        "name": "Margherita Pizza",
+        "quantity": 2,
+        "rate": 300
+      },
+      {
+        "itemId": "8",
+        "name": "Deluxe Veggie",
+        "quantity": 1,
+        "rate": 400
+      },
+      {
+        "itemId": "3",
+        "name": "Double Cheese Margherita",
+        "quantity": 1,
+        "rate": 450
+      }
+    ]
+  }
+]

@@ -1,32 +1,74 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar app>
+      <Header />
+    </v-app-bar>
+    <v-main class="main-bg">
+      <transition
+        name="fade"
+        mode="out-in"
+      >
+       <router-view/>
+      </transition>
+    </v-main>
+  </v-app>
 </template>
 
+<script>
+import Header from '@/components/header.component.vue'
+export default {
+  name: 'App',
+
+  components: {
+    Header
+  },
+
+  data: () => ({
+    //
+  }),
+  methods: {
+    beforeLeave(element) {
+      this.prevHeight = getComputedStyle(element).height;
+    },
+    enter(element) {
+      const { height } = getComputedStyle(element);
+
+      element.style.height = this.prevHeight;
+
+      setTimeout(() => {
+        element.style.height = height;
+      });
+    },
+    afterEnter(element) {
+      element.style.height = 'auto';
+    },
+  }
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.v-main__wrap, .v-toolbar__content {
+  max-width: 1200px !important;
+  margin: auto;
+}
+.v-main__wrap {
+  margin-top: 20px;
+}
+.main-bg {
+  background-image: url('~@/assets/bg.jpg');
+  background-size: cover;
 }
 
-#nav {
-  padding: 30px;
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
